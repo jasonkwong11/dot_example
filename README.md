@@ -1,8 +1,10 @@
 # DotExample
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dot_example`. To experiment with that code, run `bin/console` for an interactive prompt.
+<img src="http://www.cs.utah.edu/~gk/atwork/img/hevequip2.gif"></img>
 
-TODO: Delete this and the text above, and describe your gem
+It's become very common practice to use a tool like the `dotenv` gem to manage environment variables locally. However on a team it is easy for people to be out of date on which ENV variables they need in their `.env` file and sometimes it isn't obvious that htis is where a problem arises. Adding the keys to the README and/or to a `.env.example` file is one way to share the ENV variables needed with the rest of the team, but like many kinds of documentation it is easy for these files to get out of date.
+
+Enter `dot_example` make sure you always have the most up to date environment variables by automatically checking for new ENV variables when you pull new code and automatically adding to a `.env.example` every time a team member adds new variables.
 
 ## Installation
 
@@ -22,7 +24,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+dot_example ships with three rake task, `setup`, `sync` and `check_vars`
+
+### Setup
+
+```
+rake dot_example:setup
+```
+
+Will setup 
+
 
 ## Development
 
@@ -32,7 +43,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dot_example. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/smcabrera/dot_example. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
