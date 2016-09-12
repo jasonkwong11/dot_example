@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Stephen Mariano Cabrera"]
   spec.email         = ["stephen.m.cabrera@gmail.com"]
 
-  spec.summary       = %q{Automatically keep your project's environment variables in snyc across your team}
-  spec.description   = %q{Automatically keep your project's environment variables in snyc across your team}
+  spec.summary       = %q{Keep your project's environment variables in snyc across your team}
+  spec.description   = %q{Keep your project's environment variables in snyc across your team}
   spec.homepage      = "https://www.github.com/smcabrera/dot_example"
   spec.license       = "MIT"
 
@@ -18,6 +18,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_runtime_dependency 'commander', '~> 4.4'
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"

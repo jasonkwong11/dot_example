@@ -24,16 +24,36 @@ Or install it yourself as:
 
 ## Usage
 
-dot_example ships with three rake task, `setup`, `sync` and `check_vars`
+dot_example ships with three rake task, `setup`, `sync` and `check`
 
 ### Setup
 
 ```
-rake dot_example:setup
+$ dot_example setup
 ```
 
-Will setup 
+Sets up the githooks that will cause sync and check to run automatically. Assuming this works without a hitch this should keep you from having to manually run anything ever. You can even put a line in the bin/setup script to call this command:
 
+```
+
+```
+and then you won't even have to manually run `setup` just have everyone run `./bin/setup` when they start the project. In case you do need to run the commands for whatever reason you can run the other two commands are as follows:
+
+### Sync
+
+```
+$ dot_example snyc
+```
+sync will take the keys to the ENV variables are in your `.env` file and write them to a `.env.example` file. By keeping _this_ file in source control rather than the actual `.env` file you can make sure that other team members are always up to date on which ENV variables they are missing.
+
+### Check
+
+```
+$ dot_example check
+```
+check will look at the ENV variables you currently have on the system and make sure they are up to date with the keys in the `.env.example`. This doesn't guarantee that their _values_ are correct but at least you'll receive a warning if you're missing keys and you'll know to ask someone for the ENV variables you're missing.
+
+Sync and check may seem like trivial tasks, but remember the beauty is in not having to worry about them anymore by automating them in the first step. The setup command will create githooks such that the `sync` command will be run automatically whenever you are about to commit new code and the check command will run whenever you pull new code.
 
 ## Development
 

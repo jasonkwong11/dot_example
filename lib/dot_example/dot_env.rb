@@ -18,8 +18,7 @@ class DotEnv
         # TODO: Don't know if this is the best error message
         raise "Invalid Environment variable defintion"
       end
-      # http://rubular.com/r/SPeb5JXNje
-      line.match(/(.*)=.*\n/)[1]
+      line.match(/(.*)=.*\n/)[1] # http://rubular.com/r/SPeb5JXNje
     end
   end
 
