@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Stephen Mariano Cabrera"]
   spec.email         = ["stephen.m.cabrera@gmail.com"]
 
-  spec.summary       = %q{Keep your project's environment variables in snyc across your team}
-  spec.description   = %q{Keep your project's environment variables in snyc across your team}
+  spec.summary       = DotExample::SUMMARY
+  spec.description   = DotExample::DESCRIPTION
   spec.homepage      = "https://www.github.com/smcabrera/dot_example"
   spec.license       = "MIT"
 
@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency 'commander', '~> 4.4'
+  spec.add_runtime_dependency 'dotenv', '~> 2.1', '>= 2.1.1'
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"

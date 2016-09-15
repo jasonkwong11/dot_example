@@ -18,7 +18,7 @@ class DotEnv
         # TODO: Don't know if this is the best error message
         raise "Invalid Environment variable defintion"
       end
-      line.match(/(.*)=.*\n/)[1] # http://rubular.com/r/SPeb5JXNje
+      line.split("=")[0]
     end
   end
 
